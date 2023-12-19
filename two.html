@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body>
+    
+    <div class="h1">
+        <h1>Learning</h1>
+        <h1>javaScript</h1>
+    </div>
+</body>
+
+ <!-- javaScript DOM Document object model -->
+<script>
+      
+      const div = document.createElement('div');
+      console.log(div);
+
+      div.className = "heading"
+      div.id = Math.round(Math.random() * 10 + 1) 
+      div.setAttribute("Title" , "Title11")    
+
+      div.style.color = "blue"
+      div.style.backgroundColor = "black"
+      div.style.padding = "10px"
+    //   div.innerText = "Chai ke saath Code"
+
+      const code = document.createTextNode("Chai ke Saath Code")
+      div.appendChild(code)
+
+
+      document.body.appendChild(div)
+</script>
+</html>

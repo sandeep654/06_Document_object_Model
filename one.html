@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Data object manipulation</title>
+</head>
+<body>
+    <!-- document.getElementById("div1").className -->
+        <!-- document.getElementById("div1").id -->
+    <!-- document.getElementById("div1") -->
+    <!-- Array.from(techvandhan) convert into array-->
+    <!-- title.textcontent(show hidden content also), title.innertext , title.innerHTML( html tag ko support krta h) -->
+     <!-- document.queryselector('h1') -->
+
+    <div id="div1" class="hello">    
+        <h1 class="heading1"></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent)
+    console.log(parent.children[3].innerText)
+    // console.log(parent.children[1].innerHTML)  // Html collection , nodelist use as array but diiferent in prototype 
+    
+    // console.log(parent.children[2].innerText)
+
+    parent.children[1].style.color ="red"
+    // parent.children[0].style.color ="orange"
+    
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+
+    // child to parent 
+
+    const dayOne = document.querySelector('.day')
+    console.log(dayOne)
+    console.log(dayOne.parentElement)
+    console.log(dayOne.nextElementSibling)
+
+ console.log("Nodes: " , parent.childNodes);
+
+
+</script>
+</html>

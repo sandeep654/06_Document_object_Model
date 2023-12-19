@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai ke Saath Code || DOM</title>
+</head>
+<body>
+
+  <ul class="langName">
+    <li>javaScript</li>
+  </ul>
+    
+</body>
+
+<Script>
+    function addList(lang) {
+        const li = document.createElement('li')
+        li.innerHTML = `${lang}`
+        document.querySelector('.langName').appendChild(li)     
+    }
+    addList("Python")
+    addList("Java")
+    addList("C++")
+
+    function addOptiList(LangName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(LangName))
+        document.querySelector('.langName').appendChild(li)
+    }
+
+    addOptiList("Golang")
+
+    // Edit 
+    const ThirdChild = document.querySelector('li:nth-child(3)')
+     // ThirdChild.innerHTML = "C"
+     
+    const newLi = document.createElement('li')
+    newLi.textContent = "Ruby on Rails"
+    ThirdChild.replaceWith(newLi)
+
+    const firstLang = document.querySelector('li:first-Child')
+    firstLang.outerHTML = '<li>typeScript</li>'
+
+    //Re-move
+    
+    const lastLang = document.querySelector('li:last-Child')
+    lastLang.remove()
+
+
+</Script>
+
+</html>
